@@ -5,3 +5,5 @@ server:
 
 weixin:
   token: 32TOHB77ZE0S4KFW
+  app-id: wxcc3377003e0d14fa
+  app-secret: a4981b61c15f44e825db063ab1dc636b
