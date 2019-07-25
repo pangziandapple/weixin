@@ -1,27 +1,32 @@
 package apple.pangzi.data;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlCData;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
-@JacksonXmlRootElement(localName = "commonMessage")
+@JacksonXmlRootElement(localName = "xml")
 public class CommonMessage {
     @JacksonXmlProperty(localName = "ToUserName")
+    @JacksonXmlCData
     private String toUserName;
 
     @JacksonXmlProperty(localName = "FromUserName")
+    @JacksonXmlCData
     private String fromUserName;
 
     @JacksonXmlProperty(localName = "CreateTime")
     private Long createTime;
 
     @JacksonXmlProperty(localName = "MsgType")
+    @JacksonXmlCData
     private String msgType;
 
     @JacksonXmlProperty(localName = "Content")
+    @JacksonXmlCData
     private String content;
 
     @JacksonXmlProperty(localName = "MsgId")
-    private String msgId;
+    private Long msgId;
 
     public String getToUserName() {
         return toUserName;
@@ -63,11 +68,11 @@ public class CommonMessage {
         this.content = content;
     }
 
-    public String getMsgId() {
+    public Long getMsgId() {
         return msgId;
     }
 
-    public void setMsgId(String msgId) {
+    public void setMsgId(Long msgId) {
         this.msgId = msgId;
     }
 }
